@@ -11,5 +11,12 @@ const convertTemperatureTo = (unit, value) => {
     return value * 1.8 + 32;
   }
 };
+function isIceTemperature(value, unit) {
+    if (unit === UNITS.celcius) {
+        return value <= 0
+    } else {
+        return value <= 32
+    }
+}
 
-export { getOppositUnit, convertTemperatureTo };
+export { getOppositUnit, convertTemperatureTo, isIceTemperature };
